@@ -1,0 +1,94 @@
+1. To register the new Customer :
+Post Request : 
+http://localhost:8888/AgroFarm/customer-api/register
+
+Request Body :
+
+{
+    "emailId": "madhupandhare259@gmail.com",
+    "name": "Madhurima Pandhare",
+    "password": "Madhu@123",
+    "phoneNumber": "9595881207",
+    "address": "Laxmi Chowk, Hinjewadi Phase 1, Pune 411057"
+}
+
+2. Getting customer details :
+GET Request :
+http://localhost:8080/AgroFarm/customer-api/customer/david@protonmail.com
+
+3. Authenticate Login Customer Details :
+Post Request:
+http://localhost:8080/AgroFarm/customer-api/login
+
+Request Body (CustomerCredDTO) :
+{
+   "emailId":  "david@protonmail.com",
+   "password": "David123"
+}
+
+4. For getting all products
+GET Request :
+http://localhost:8080/AgroFarm/product-api/products
+
+5. For getting Product details by Product Id:
+GET Request :
+http://localhost:8080/AgroFarm/product-api/product/1005
+
+6. For Updating the available quantity of product:
+PUT Request :
+http://localhost:8080/AgroFarm/product-api/updatequantity/1005
+
+7. Adding Product to the Customer Cart:
+POST Request :
+http://localhost:8080/AgroFarm/cart-api/products
+{
+  "customerEmailId": "david@protonmail.com",
+  "cartProducts": [
+    {
+      "product": {
+        "productId": 1052
+      },
+      "quantity": 2
+    },
+    {
+      "product": {
+        "productId": 1041
+      },
+      "quantity": 3
+    }
+    // Add more products if needed
+  ]
+}
+
+
+8. For Getting Products from cart:
+GET Request :
+http://localhost:8080/AgroFarm/cart-api/customer/david@protonmail.com/products
+
+9. For Deleting the Products From Cart:
+DELETE Request :
+http://localhost:8080/AgroFarm/cart-api/customer/david@protonmail.com/product/1058
+
+10. For Deleting All Products From Cart: 
+DELETE Request :
+http://localhost:8080/AgroFarm/cart-api/customer/david@protonmail.com/products
+
+11. For Updating the quantity Of The Product:
+PUT Request :
+http://localhost:8080/AgroFarm/cart-api/customer/david@protonmail.com/product/1058
+
+
+12. To get all order details :
+GET Request :
+http://localhost:8080/AgroFarm/order-api/customer/david@protonmail.com/orders
+
+13. To get order details by Order Id :
+GET Request :
+http://localhost:8080/AgroFarm/order-api/order/1000
+
+
+13. To get available card type :
+GET Request :
+
+
+
